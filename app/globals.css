@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffb34710;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff6600a1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6700;
+}
+
+*{
+  /* user-select: none; */
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.shadow-dark{
+  box-shadow: 0 0 15px rgb(0, 0, 0,.5);
+}
+
+.nom{
+  background: rgb(230, 230, 230);
+  color: black;
+}
+
+.main{
+  background: #505050;
+  color: white;
+}
+
+
+.shadow-dark-sm{
+  box-shadow: 0 0 5px rgb(0, 0, 0,.5);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000000;
+  background: #ffffff;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.dark-bg{
+  background: #ffffff;
+}
+
+.shadow-glow{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.371);
+}
+
+.shadow-glow-mild{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.145);
+}
+
+.text-col{
+  color: transparent;
+  background-image: #ff6700;
+background-image: linear-gradient(150deg, #ff6700 0%, #ffb347 50%, #ff6700 100%);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.inverted-background {
+  transform: scaleY(-1);
+}
+
+.accept-btn{
+  background: #00ffff50;
+}
+
+.reject-btn{
+  background: #ff00ff50;
+}
+
+
+.bg-col{
+  background: #ff6700;
+  background: linear-gradient(150deg, #ff6700 0%, #ffb347 50%, #ff6700 100%);
+}
+
+.black-bg{
+  background: black;
+}
+
+.gray-bg{
+  background: rgb(112, 112, 112);
+}
+@keyframes glow {
+  from { box-shadow: 0 0 0px #ffb347b3; }
+  to { box-shadow: 0 0 10px #ffb347b3, 0 0 20px #ffb34780, 0 0 30px #ffb3474d; }
+}
+
+.logo-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.userHov{
+  border-bottom: 1px solid #ffb34710;
+}
+
+.userHov:hover{
+  background: #ffb34715;
+}
+
+@media screen and (max-width: 768px) {
+  .copy-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+  }
+}
